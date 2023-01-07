@@ -149,10 +149,12 @@ card2.setAttribute("class","card h-100")
 var card3=document.createElement("div");
 card3.setAttribute("class","card-body")
 
-    var img=document.createElement("img");
-    img.src=elem.ImageUrl
-    img.setAttribute("class","card-img-top")
+    // var img=document.createElement("img");
+    // img.src=elem.ImageUrl
+    // img.setAttribute("class","card-img-top")
     
+    var img=document.createElement("div");
+    img.setAttribute("class","border border-primary w-100 p-5")
     
     var Name = document.createElement("h5");
     Name.innerText=elem.Name 
@@ -167,7 +169,7 @@ card3.setAttribute("class","card-body")
 
 
 card3.append(Name,ShortDesc,Button);
-card2.append(card3,img);
+card2.append(img,card3);
 card1.append(card2);
 //card.append(card1);
 document.getElementById("classcards").append(card1);
